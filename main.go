@@ -15,10 +15,10 @@ import (
 	"github.com/tencentyun/cos-go-sdk-v5"
 )
 
-var BucketURL = "xxxxx-1500000000"
+var BucketURL = "blog-image-1257452121"
 var AP = "ap-chongqing"
-var SercertID = "xxxxxxxxxxxxxxxxxxxxxx"
-var SecretKey = "xxxxxxxxxxxxxxxxxxxxxx"
+var SercertID = "AKIDpcHl14h6HFJ2Y6hEdwCQcr5Cex220ldZ"
+var SecretKey = "wgCVp6ENQMSUYgjcP3fF1kJrGPO7pLgp"
 
 func main() {
 	argsLen := len(os.Args)
@@ -43,6 +43,9 @@ func main() {
 			return
 		}
 		filePath = os.Args[3]
+	default:
+		fmt.Println("unknown operation")
+		return
 	}
 
 	stat, err := os.Stat(path)
